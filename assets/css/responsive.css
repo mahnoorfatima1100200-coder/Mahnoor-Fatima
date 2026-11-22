@@ -1,0 +1,202 @@
+/* ==========================================================================
+   SKINORA - RESPONSIVE STYLES
+   Ensures flawless display across mobile phones, tablets, and laptops.
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .categories-grid,
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .shop-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: var(--shadow-lg);
+        z-index: 2000;
+        padding: 50px 24px 30px;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .main-nav.open {
+        left: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .nav-close-btn {
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--dark-charcoal);
+    }
+
+    .nav-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1999;
+        display: none;
+    }
+
+    .nav-backdrop.show {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 36px;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+
+    .hero-desc {
+        margin: 0 auto 28px;
+    }
+
+    .hero-btn-group {
+        justify-content: center;
+    }
+
+    .hero-badge-floating {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .categories-grid,
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .promo-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 24px;
+        gap: 24px;
+    }
+
+    .promo-content h2 {
+        font-size: 2rem;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-sidebar {
+        display: none; /* Can be toggled on mobile filter button */
+    }
+
+    .shop-sidebar.active-mobile {
+        display: block;
+        margin-bottom: 24px;
+    }
+
+    .product-details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-logo {
+        font-size: 1.6rem;
+    }
+
+    .brand-tagline {
+        font-size: 0.62rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-thumb {
+        height: 220px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}
